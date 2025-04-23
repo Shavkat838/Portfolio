@@ -71,14 +71,14 @@ const { data, error } = await supabase
 
 async function getProjects(){
     try {
-         await supabase
+         const {data:projects,error}=await supabase
           .from("projects")
           .select("*");
           setProjectFields([])
           setFieldText("")
         setProjectName("")
         setProjectImage("")
-        setProjectRole("")
+               setProjectRole("")
     } catch (error) {
         console.log(error)
     }
