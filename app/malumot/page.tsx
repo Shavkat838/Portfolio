@@ -34,7 +34,7 @@ export default function MalumotPage() {
 
   async function getusertex() {
     try {
-      let { data: userstex } = await supabase.from("userstex").select("*");
+      const { data: userstex } = await supabase.from("userstex").select("*");
       if (userstex && userstex.length > 0) {
         setUsersTex(userstex)
       }

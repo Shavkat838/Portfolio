@@ -1,10 +1,10 @@
 "use client"
 
-import { BASE_IMAGE_URL, BASE_IMAGEE_URL, Users } from "@/helpers/types";
+import { BASE_IMAGE_URL, BASE_IMAGEE_URL,} from "@/helpers/types";
 import { createClient } from "@/utils/client";
 
 import Image from "next/image";
-import { describe } from "node:test";
+
 import { useEffect, useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import Loyiha from "./Loyiha";
@@ -202,7 +202,7 @@ async function handleTexSave(){
 
 async function getusertex(){
   try {
-    let { data: userstex } = await supabase.from("userstex").select("*");
+    const { data: userstex } = await supabase.from("userstex").select("*");
     if(userstex&&userstex.length>0){
        setUserTexID(userstex[0].id)
        setDescription(userstex[0].description||"");

@@ -6,11 +6,11 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 
-type Murojat={
-  fullname:string;
-  izoh:string;
-  email:string;
-}
+// type Murojat={
+//   fullname:string;
+//   izoh:string;
+//   email:string;
+// }
 
 
 
@@ -50,7 +50,7 @@ export default function ContactPage() {
         email,
         izoh,
       }
-      const { data, error } = await supabase
+      await supabase
         .from("murojatlar")
         .insert([obj])
         .select();

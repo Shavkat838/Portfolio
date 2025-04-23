@@ -18,7 +18,7 @@ export default function Home() {
   
   async function getUser(){
     try {
-      const { data: usersdata, error } = await supabase
+      const { data: usersdata,} = await supabase
         .from("usersdata")
         .select("*");
         console.log(usersdata![0].imageUrl)
