@@ -40,12 +40,12 @@ const blockedPages=["/user-malumot"]
         style={{ backgroundImage: "url('/banner1.svg')" }}
         className={`${poppins.className}   antialiased bg-cover`}
       >
-        <div className="container max-w-full w-full  bg-[#1A1A1A]">
+        <div className="container max-w-full w-full z-50 fixed bg-[#1A1A1A]">
           {!blockedPages.includes(pathname) ? <Header /> : ""}
         </div>
         <div
           style={{ backgroundImage: "url('/body.svg')" }}
-          className="flex container max-w-[1240px] w-full mx-auto  mi-h-screen "
+          className="flex container max-w-[1240px]  w-full mx-auto pt-[48px]   min-h-screen "
         >
           {!blockedPages.includes(pathname) ? (
             <div
@@ -53,7 +53,7 @@ const blockedPages=["/user-malumot"]
               onMouseLeave={() => setOpen(false)}
               className={`
              transition-all duration-200 ease-in-out 
-               bg-[#1B1B1B] z-50 fixed  left-0 top-0 h-screen
+               bg-[#1B1B1B] z-10 fixed  left-0  top-0  h-screen
              lg:relative lg:h-auto lg:min-h-screen
           ${
             open
@@ -68,7 +68,7 @@ const blockedPages=["/user-malumot"]
           ) : (
             ""
           )}
-          <div className="max-w-[952px] container w-full  min-h-screen   flex  justify-center">
+          <div className="lg:max-w-[952px] container w-full z-0  min-h-screen   flex  justify-center">
             {children}
           </div>
         </div>

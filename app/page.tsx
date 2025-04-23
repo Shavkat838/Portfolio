@@ -28,10 +28,10 @@ export default function Home() {
     }
   }
   return (
-    <div className="max-w-[633px] h-[265px] w-[100%] mt-[227px] flex items-center  flex-col">
-      <h1 className="font-bold  text-[36px] text-center text-white  ">
+    <div className="max-w-[633px]  px-[5px] sm:px-0 h-[265px] w-[100%]  mt-[227px] flex items-center  flex-col">
+      <h1 className="font-bold  text-[36px] text-center text-white">
         Assalomu alaykum, Men
-        <span className="text-green-700"> {users[0]?.name}</span> man
+        <span className="text-green-700"> {users[0]?.name}</span>
       </h1>
       <p className="text-[18px] text-center  text-gray-500  font-medium   ">
         {users[0]?.malumot}
