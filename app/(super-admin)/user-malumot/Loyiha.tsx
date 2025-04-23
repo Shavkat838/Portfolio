@@ -16,7 +16,6 @@ export default function Loyiha() {
     const [projectName,setProjectName]=useState("")
     const [projectRole,setProjectRole]=useState<Role>("")
     const [projectImage,setProjectImage]=useState("")
-    const [projectId,setProjectId]=useState("")
     const [projectFields,setProjectFields]=useState<string[]>([])
     const [fieldText,setFieldText]=useState("")
      const supabase=createClient()
