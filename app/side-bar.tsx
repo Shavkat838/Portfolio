@@ -44,7 +44,7 @@ async function getUser(){
           alt="person"
           width={259}
           height={260}
-          style={{height:"260px"}}
+          style={{height:"260px",width:"259px"}}
         />
         <div>
           <p className="font-medium  text-[18px] leading-1 text-white mt-[14px]">
