@@ -45,30 +45,30 @@ const blockedPages=["/user-malumot"]
         </div>
         <div
           style={{ backgroundImage: "url('/body.svg')" }}
-          className="flex  container max-w-[1240px] w-full mx-auto relative min-h-screen border border-white"
+          className="flex container max-w-[1240px] w-full mx-auto  mi-h-screen "
         >
-          {!blockedPages.includes(pathname) ?          
-          <div
-            onMouseEnter={() => setOpen(true)}
-            onMouseLeave={() => setOpen(false)}
-            className={`
+          {!blockedPages.includes(pathname) ? (
+            <div
+              onMouseEnter={() => setOpen(true)}
+              onMouseLeave={() => setOpen(false)}
+              className={`
              transition-all duration-200 ease-in-out 
-             min-h-screen
-            bg-[#1B1B1B]
-             z-50
-             absolute top-0 left-0 h-full 
+               bg-[#1B1B1B] z-50 fixed  left-0 top-0 h-screen
              lg:relative lg:h-auto lg:min-h-screen
           ${
-          open
-            ? "opacity-100 w-[288px] "
-            : "opacity-0 w-[164px]"
-           }
+            open
+              ? "translate-x-0 opacity-100 w-[288px]"
+              : "-translate-x-[320px] opacity-0 w-[164px]"
+          }
           overflow-hidden
           `}
-          >
-            <Side_bar />
-          </div> : ""}
-          <div className="max-w-[952px] container w-full min-h-screen border border-white   flex  justify-center">
+            >
+              <Side_bar />
+            </div>
+          ) : (
+            ""
+          )}
+          <div className="max-w-[952px] container w-full  min-h-screen   flex  justify-center">
             {children}
           </div>
         </div>

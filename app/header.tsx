@@ -3,6 +3,7 @@ import useGamburgerStore from "@/store/gamburger";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { IoMdMenu } from "react-icons/io";
 
 
 
@@ -14,7 +15,7 @@ export default function Header() {
  const {setOpen}=useGamburgerStore()
 
   return (
-    <div className="max-w-[1240px] mx-auto w-[100%]  h-[48px]  flex justify-between items-center  border-b-1 border-[#FFFFFF40] rounded-t-[13px] bg-[#1A1A1A] border-2 px-1">
+    <div className="lg:max-w-[1240px]  mx-auto w-[100%]   h-[48px]  flex justify-between items-center  border-b-1 border-[#FFFFFF40] rounded-t-[13px] bg-[#1A1A1A] border-2 px-1">
       <div
         onMouseEnter={() => setOpen(true)}
         onMouseLeave={() => setOpen(false)}
@@ -28,7 +29,12 @@ export default function Header() {
             height={32}
           />
         </button>
-         <p className="w-[136px] h-[28px] text-[22px] font-medium text-white leading-[28px]"> SHAVKATJON<span className="text-green-800 text-[22px] font-medium ">.UZ</span>   </p>
+        <p className="w-[136px] h-[28px] text-[22px] font-medium text-white leading-[28px]">
+          SHAVKATJON
+          <span className="text-green-800 text-[22px] font-medium ">
+            .UZ
+          </span>
+        </p>
       </div>
       <div className="max-w-[419px] h-[32px] w-[100%] flex  items-center justify-between">
         <div className="max-w-[373px] w-[100%] h-[24px] flex items-center justify-between">
