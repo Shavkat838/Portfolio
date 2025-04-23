@@ -28,9 +28,7 @@ export default function Header() {
             height={32}
           />
         </button>
-        <Link href={"/"}>
-          <Image src={"/logo.svg"} alt="logo" width={136} height={28} />
-        </Link>
+         <p className="w-[136px] h-[28px] text-[22px] font-medium text-white leading-[28px]"> SHAVKATJON<span className="text-green-800 text-[22px] font-medium ">.UZ</span>   </p>
       </div>
       <div className="max-w-[419px] h-[32px] w-[100%] flex  items-center justify-between">
         <div className="max-w-[373px] w-[100%] h-[24px] flex items-center justify-between">

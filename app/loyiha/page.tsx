@@ -65,7 +65,7 @@ export default function LoyihaPage() {
                   src={item.projectImage}
                   alt="photo"
                   width={444}
-                  style={{ height: "220px" }}
+                  style={{ height: "220px",width:"444px",backgroundSize:"100% 100%" }}
                   height={220}
                 />
                 <div className="mt-[12px] w-[444px] flex justify-between  ">

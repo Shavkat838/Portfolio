@@ -58,15 +58,14 @@ const blockedPages=["/user-malumot"]
           ${
           open
             ? "translate-x-0 opacity-100 w-[288px]"
-            : "-translate-x-[300px] opacity-0 w-[164px]"
+            : "-translate-x-[300px] opacity-0 w-0"
            }
           overflow-hidden
           `}
           >
             <Side_bar />
           </div> : ""}
-
-          <div className="max-w-[952px] container w-full  flex  justify-center">
+          <div className="max-w-[952px] container w-full border border-white  flex  justify-center">
             {children}
           </div>
         </div>
