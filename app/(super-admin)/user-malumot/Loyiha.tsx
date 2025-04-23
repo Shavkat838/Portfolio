@@ -57,7 +57,7 @@ try {
         projectFields,
         projectImage
     }
-const { data, error } = await supabase
+   await supabase
   .from("projects")
   .insert([obj])
   .select();
@@ -71,14 +71,14 @@ const { data, error } = await supabase
 
 async function getProjects(){
     try {
-         const {data:projects,error}=await supabase
+         await supabase
           .from("projects")
           .select("*");
           setProjectFields([])
           setFieldText("")
         setProjectName("")
         setProjectImage("")
-               setProjectRole("")
+       setProjectRole("")
     } catch (error) {
         console.log(error)
     }
