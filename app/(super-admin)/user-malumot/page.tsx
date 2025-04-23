@@ -15,11 +15,7 @@ type Imag={
   texImage:string;
 }
 
-type UserTex={
-  description:string;
-  images:Imag[];
-  id:string;
-}
+
 
 export default function UserPage() {
 
@@ -96,7 +92,7 @@ try {
       fields,
       malumot,
     };
-    const { data, error } = await supabase
+    await supabase
       .from("usersdata")
       .insert([obj])
       .select("*");
@@ -143,7 +139,7 @@ async function handleUpdate(){
         malumot,
       };
   try {
-    const { data, error } = await supabase
+     await supabase
       .from("usersdata")
       .update(obj)
       .eq("id",currentEditId )
@@ -193,7 +189,7 @@ async function handleTexSave(){
     images,
   }
    try {
-    const { data } = await supabase
+    await supabase
     .from("userstex")
     .insert([obj])
     .select();
@@ -225,7 +221,7 @@ async function handleTexUpdate(){
          images,
       };
       try {
-        const { data } = await supabase
+        await supabase
           .from("userstex")
           .update(obj)
           .eq("id", userTexID)
