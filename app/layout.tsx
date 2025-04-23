@@ -45,27 +45,30 @@ const blockedPages=["/user-malumot"]
         </div>
         <div
           style={{ backgroundImage: "url('/body.svg')" }}
-          className="flex container max-w-[1240px] w-full mx-auto min-h-screen"
+          className="flex  container max-w-[1240px] w-full mx-auto relative min-h-screen border border-white"
         >
           {!blockedPages.includes(pathname) ?          
           <div
             onMouseEnter={() => setOpen(true)}
             onMouseLeave={() => setOpen(false)}
             className={`
-             transition-all duration-200 ease-in-out
-            min-h-screen
-             bg-[#1B1B1B]
+             transition-all duration-200 ease-in-out 
+             min-h-screen
+            bg-[#1B1B1B]
+             z-50
+             absolute top-0 left-0 h-full 
+             lg:relative lg:h-auto lg:min-h-screen
           ${
           open
-            ? "translate-x-0 opacity-100 w-[288px]"
-            : "-translate-x-[300px] opacity-0 w-0"
+            ? "opacity-100 w-[288px] "
+            : "opacity-0 w-[164px]"
            }
           overflow-hidden
           `}
           >
             <Side_bar />
           </div> : ""}
-          <div className="max-w-[952px] container w-full border border-white  flex  justify-center">
+          <div className="max-w-[952px] container w-full min-h-screen border border-white   flex  justify-center">
             {children}
           </div>
         </div>
