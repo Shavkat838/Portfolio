@@ -26,7 +26,7 @@ export default function MalumotPage() {
   },[])
 
   const supabase=createClient()
-  const [hover,setHover]=useState("")
+  const [hoverindex,setHoverIndex]=useState<number|null>(null)
 
  const [usersTex,setUsersTex]=useState<UserTex[]>([])
 
@@ -72,12 +72,12 @@ export default function MalumotPage() {
           {usersTex[0] &&
             usersTex[0].images.map((imag, index) => (
               <div
-                onMouseEnter={() => setHover("PLUS")}
-                onMouseLeave={() => setHover("MINUS")}
+                onMouseEnter={() => setHoverIndex(index)}
+                onMouseLeave={() => setHoverIndex(null)}
                 key={index}
-                className="max-w-[209px] w-full h-[124px] mx-auto sm:mx-0  relative rounded-[12px] bg-[#1B1B1B] border border-gray-50 flex items-center justify-center"
+                className="max-w-[209px] cursor-pointer w-full h-[124px] mx-auto sm:mx-0  relative rounded-[12px] bg-[#1B1B1B] border border-gray-50 flex items-center justify-center"
               >
-                {hover === "PLUS" ? (
+                {hoverindex === index ? (
                   <p className="text-[20px] font-semibold text-white">
                     {imag.texname}
                   </p>

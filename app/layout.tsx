@@ -5,7 +5,11 @@ import "./globals.css";
 import Header from "./header";
 import useGamburgerStore from "@/store/gamburger";
 import Side_bar from "./side-bar";
-import {  usePathname } from "next/navigation";
+import {  usePathname, useRouter } from "next/navigation";
+import { useEffect } from 'react';
+
+
+
 
 
 
@@ -26,12 +30,22 @@ export default function RootLayout({
 }>) {
 
 
+  useEffect(()=>{
+    chekUser()
+  },[])
+
 const {open,setOpen}=useGamburgerStore()
 const pathname=usePathname()
-
+const router=useRouter()
 const blockedPages=["/user-malumot"]
 
 
+
+function chekUser(){
+  if(blockedPages.includes(pathname)){
+     router.push('/admin-login')
+  }
+}
 
 
   return (
