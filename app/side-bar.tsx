@@ -31,7 +31,7 @@ async function getUser(){
 
   
   return (
-    <div className="bg-[#1B1B1B]">
+    <div className="bg-[#1B1B1B]  ">
       <div className="max-w-[287px]  border-b-1 border-[#FFFFFF40] mb-[14px] h-[40px] w-[100%] flex items-center gap-[14px] pl-[14px] ">
         <Image className="w-[24px] h-[24px] " src={"/chapImg.svg"} alt="Image" width={24} height={24} />
         <Image className="w-[24px] h-[24px] " src={"/ongImg.svg"} alt="Image" width={24} height={24} />
@@ -68,7 +68,7 @@ async function getUser(){
           ))}
         </div>
       </div>
-      <div className="max-w-[288px] h-[244px]   mt-[14px]  flex flex-col items-center gap-[14px]">
+      <div className="max-w-[288px] h-[244px]   mt-[14px]  flex flex-col items-start pl-[5px]  gap-[14px]">
         <div className="w-[260px] h-[47px] flex gap-[10px]">
           <Image className="w-[44px] h-[44px] " src={"/gmail.svg"} alt="gmail" width={44} height={44} />
           <div className="width-[171px] h-[47px]  flex flex-col gap-[15px] ">

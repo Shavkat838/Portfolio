@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { IoMdMenu } from "react-icons/io";
 import { TbLayoutNavbarCollapse } from "react-icons/tb";
 
 
@@ -36,7 +35,7 @@ export default function Header() {
         </button>
         <Link href={"/"}>
           <p className="w-[136px] h-[28px] text-[22px] font-medium text-white leading-[28px]">
-            SHAVKATJON
+            SHAVKAT
             <span className="text-green-800 text-[22px] font-medium ">.UZ</span>
           </p>
         </Link>
