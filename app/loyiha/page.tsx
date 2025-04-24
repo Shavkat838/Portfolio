@@ -106,7 +106,7 @@ export default function LoyihaPage() {
         </div>
       </div>
 
-      <div className="max-w-[300px] w-full sm:max-w-[912px] min-h-[600px] sm:h-[208px] mx-auto sm:mx-0 flex flex-col sm:flex-row items-center mb-[26px]  mt-[64px] p  sm:pl-[20px] rounded-[12px] bg-[#1B1B1B]  ">
+      <div className="max-w-[300px] w-full sm:max-w-[912px] h-[600px] sm:h-[208px] mx-auto sm:mx-0 flex flex-col sm:flex-row items-center mb-[26px]  mt-[64px] p  sm:pl-[20px] rounded-[12px] bg-[#1B1B1B]  ">
         <Image className="mt-[20px] sm:mt-0" src={"/tg_icon.svg"} alt="telegram" width={168} height={168} />
         <div className="sm:ml-[20px] max-w-[406px] w-full flex flex-col items-center sm:items-start gap-[20px] sm:gap-[12px] ">
           <h1 className="text-white text-[28px] mt-[10px] sm:mt-0 font-bold ">Telegram kanal</h1>
