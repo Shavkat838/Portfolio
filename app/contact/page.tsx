@@ -72,7 +72,7 @@ export default function ContactPage() {
               <Image src={"/border.svg"} alt="photo" width={112} height={8} />
             </div>
             <div className="max-w-[912px]  grid grid-cols-1 sm:grid-cols-3  space-y-3 ">
-              <div className="max-w-[350px] sm:max-w-[290px] w-full h-[190px] flex items-center justify-center bg-[#1B1B1B]  rounded-[12px] border-1 border-[#FFFFFF40]    ">
+              <div className="max-w-[5000px] sm:max-w-[290px] w-full h-[190px] flex items-center justify-center bg-[#1B1B1B]  rounded-[12px] border-1 border-[#FFFFFF40]    ">
                 <div className="w-[100%] h-[134px] flex flex-col items-center gap-[8px]">
                   <Image
                     src={"/gmail.svg"}
@@ -88,7 +88,7 @@ export default function ContactPage() {
                   </p>
                 </div>
               </div>
-              <div className="max-w-[350px] sm:max-w-[290px] w-full h-[190px] flex items-center justify-center bg-[#1B1B1B]  rounded-[12px] border-1 border-[#FFFFFF40]    ">
+              <div className="max-w-[500px] sm:max-w-[290px] w-full h-[190px] flex items-center justify-center bg-[#1B1B1B]  rounded-[12px] border-1 border-[#FFFFFF40]    ">
                 <div className="w-[100%] h-[134px] flex flex-col items-center gap-[8px]">
                   <Image
                     src={"/telegram.svg"}
@@ -106,7 +106,7 @@ export default function ContactPage() {
                   </Link>
                 </div>
               </div>
-              <div className="max-w-[350px] sm:max-w-[290px] w-full h-[190px] flex items-center justify-center bg-[#1B1B1B]  rounded-[12px] border-1 border-[#FFFFFF40]    ">
+              <div className="max-w-[500px] sm:max-w-[290px] w-full h-[190px] flex items-center justify-center bg-[#1B1B1B]  rounded-[12px] border-1 border-[#FFFFFF40]    ">
                 <div className="w-[100%] h-[134px] flex flex-col items-center gap-[8px]">
                   <Image
                     src={"/contact.svg"}

@@ -38,8 +38,8 @@ export default function LoyihaPage() {
   }
 
   return (
-    <div className="mt-[32px] max-w-[912px] w-[100%]">
-      <div className="max-w-[912px] w-[100%]  px-[10px] sm:px-0 ">
+    <div className="mt-[32px] max-w-[912px] w-[100%] px-[10px] sm:px-0 ">
+      <div className="max-w-[912px] w-[100%]   ">
         <div className="max-w-[154px] w-full h-[64px] flex  flex-col gap-[8px]">
           <h1 className="text-white font-bold text-[32px]">Loyihalar</h1>
           <Image src={"/border.svg"} alt="photo" width={112} height={8} />
@@ -106,13 +106,21 @@ export default function LoyihaPage() {
         </div>
       </div>
 
-      <div className="max-w-[300px] w-full sm:max-w-[912px] h-[600px] sm:h-[208px] mx-auto sm:mx-0 flex flex-col sm:flex-row items-center mb-[26px]  mt-[64px] p  sm:pl-[20px] rounded-[12px] bg-[#1B1B1B]  ">
-        <Image className="mt-[20px] sm:mt-0" src={"/tg_icon.svg"} alt="telegram" width={168} height={168} />
+      <div className="w-full max-w-[500px] sm:max-w-[912px]  h-[600px] sm:h-[208px] mx-auto sm:mx-0 flex flex-col sm:flex-row items-center mb-[26px]  mt-[64px]   sm:pl-[20px] rounded-[12px] bg-[#1B1B1B]  ">
+        <Image
+          className="mt-[20px] sm:mt-0"
+          src={"/tg_icon.svg"}
+          alt="telegram"
+          width={168}
+          height={168}
+        />
         <div className="sm:ml-[20px] max-w-[406px] w-full flex flex-col items-center sm:items-start gap-[20px] sm:gap-[12px] ">
-          <h1 className="text-white text-[28px] mt-[10px] sm:mt-0 font-bold ">Telegram kanal</h1>
+          <h1 className="text-white text-[28px] mt-[10px] sm:mt-0 font-bold ">
+            Telegram kanal
+          </h1>
           <p className="text-[18px] max-w-[406px] text-center sm:text-start  w-full  font-normal text-[#FFFFFF40] ">
-            Barcha loyihalarimni telegram kanalimda <br className="hidden sm:block" /> ham kuzatib
-            borishingiz mumkin!
+            Barcha loyihalarimni telegram kanalimda{" "}
+            <br className="hidden sm:block" /> ham kuzatib borishingiz mumkin!
           </p>
           <Link href={"https://t.me/shavkat1_4"}>
             <button className="w-[178px]   h-[40px] cursor-pointer bg-[#39965F] rounded-[8px]  text-white text-[16px]  font-normal  flex items-center justify-center  ">
