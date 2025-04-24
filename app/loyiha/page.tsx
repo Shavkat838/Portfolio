@@ -3,6 +3,8 @@ import { createClient } from "@/utils/client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { AiOutlineLink } from "react-icons/ai";
+import { FaGithub } from "react-icons/fa";
 
 
 type Role="YUQORI"|"ORTA"|"PAST"|"";
@@ -12,6 +14,8 @@ type Project={
   projectName:string;
   projectImage:string;
   projectFields:string[]
+  githubUrl:string;
+  link:string;
 }
 
 
@@ -66,7 +70,10 @@ export default function LoyihaPage() {
           </div>
           <div className="max-w-[484px]  w-full h-[44px] flex justify-end">
             <div className="max-w-[148px] w-full rounded-[6px] border-1 border-[#FFFFFF40] h-[44px] bg-[#1B1B1B] flex items-center justify-center gap-[10px]">
-              <select onChange={(e)=>handleFilter(e.target.value as Role )} className="text-[16px] bg-[#1B1B1B] max-w-[148px] w-[100%] border-none font-medium text-white">
+              <select
+                onChange={(e) => handleFilter(e.target.value as Role)}
+                className="text-[16px] bg-[#1B1B1B] max-w-[148px] w-[100%] border-none font-medium text-white"
+              >
                 <option value="">Barchasi</option>
                 <option value="YUQORI">Yuqori</option>
                 <option value="ORTA">O`rta</option>
@@ -76,9 +83,12 @@ export default function LoyihaPage() {
           </div>
         </div>
         <div className="max-w-[912px] w-full  grid grid-cols-1 sm:grid-cols-2  mt-[25px] gap-y-[60px] gap-x-[20px]  ">
-          {  filteringProjects &&
+          {filteringProjects &&
             filteringProjects.map((item, index) => (
-              <div  key={index} className="max-w-[444px] w-full group ">
+              <div
+                key={index}
+                className="max-w-[444px] relative  w-full group "
+              >
                 <Image
                   className="rounded-[8px] group-hover:blur-xs "
                   src={item.projectImage}
@@ -91,7 +101,19 @@ export default function LoyihaPage() {
                   }}
                   height={220}
                 />
-                
+                <div className="group-hover:max-w-[444px]  group-hover:absolute group-hover:top-2 group-hover:right-6    hidden  group-hover:flex group-hover:gap-2">
+                  <Link href={item.link}>
+                    <button className="bg-white px-1 py-1 rounded-md cursor-pointer ">
+                      <AiOutlineLink size={26} />
+                    </button>
+                  </Link>
+                  <Link href={item.githubUrl}>
+                    <button className="bg-white px-1 py-1 rounded-md cursor-pointer ">
+                      <FaGithub size={26} />
+                    </button>
+                  </Link>
+                </div>
+
                 <div className="mt-[12px] max-w-[444px] w-full flex justify-between">
                   <h1 className="text-white text-[20px] font-medium  ">
                     {item.projectName}

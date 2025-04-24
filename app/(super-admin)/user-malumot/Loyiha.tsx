@@ -18,6 +18,8 @@ export default function Loyiha() {
     const [projectImage,setProjectImage]=useState("")
     const [projectFields,setProjectFields]=useState<string[]>([])
     const [fieldText,setFieldText]=useState("")
+    const [githubUrl,setGithubUrl]=useState("")
+    const [link,setLink]=useState("")
      const supabase=createClient()
 
 
@@ -47,7 +49,7 @@ function handleText(e: React.ChangeEvent<HTMLInputElement>) {
 
 async function handleSaveProject(){
 try {
-    if(projectImage===""||projectName===""||projectRole===""||fieldText===""){
+    if(projectImage===""||projectName===""||projectRole===""||fieldText===""||githubUrl===""||link===""){
         alert("Forma elementlarini toliq kiriting")
         return
     }
@@ -55,7 +57,9 @@ try {
         projectName,
         projectRole,
         projectFields,
-        projectImage
+        projectImage,
+        githubUrl,
+        link
     }
    await supabase
   .from("projects")
@@ -79,6 +83,8 @@ async function getProjects(){
         setProjectName("")
         setProjectImage("")
        setProjectRole("")
+       setGithubUrl("")
+       setLink("")
     } catch (error) {
         console.log(error)
     }
@@ -155,6 +161,28 @@ function deleteOneImage(){
               />
             )}
           </div>
+
+          <div className="max-w-[410px] w-full h-[76px] mt-[10px] flex flex-col justify-between  ">
+            <p className="text-white  font-normal text-[16px]">Github linki*</p>
+            <input
+              value={githubUrl}
+              onChange={(e) => setGithubUrl(e.target.value)}
+              className="border-1 border-[#FFFFFF40] pl-[20px] w-[100%] text-gray-300 h-[44px] rounded-[8px] "
+              type="text"
+              placeholder="Loyihani github manzilini kiriting"
+            />
+          </div>
+          <div className="max-w-[410px] w-full h-[76px] flex mt-[10px] flex-col justify-between  ">
+            <p className="text-white  font-normal text-[16px]">Nomi*</p>
+            <input
+              value={link}
+              onChange={(e) => setLink(e.target.value)}
+              className="border-1 border-[#FFFFFF40] pl-[20px] w-[100%] text-gray-300 h-[44px] rounded-[8px] "
+              type="text"
+              placeholder="Loyihani linkini kiriting"
+            />
+          </div>
+
           {/* Qaysi texnologiyalardan foydalangansiz */}
           <div className="w-full h-[76px] flex flex-col justify-between mt-2  ">
             <p className="text-white  font-normal text-[16px]">

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { IoMdMenu } from "react-icons/io";
+import { TbLayoutNavbarCollapse } from "react-icons/tb";
 
 
 
@@ -61,16 +62,22 @@ export default function Header() {
           onClick={() => setVisible(!visible)}
           className="sm:hidden cursor-pointer "
         >
-          <IoMdMenu color="white" size={26} />
+          <TbLayoutNavbarCollapse color="white" size={26} />
         </button>
 
         {visible && (
-          <div  className="absolute top-[60px] left-1 right-1  bg-[#2A2A2A] rounded-md p-1 flex flex-col gap-1 sm:hidden z-50">
-                {
-                  navbar_arr.map((item,index)=>(
-                    <a className={` ${pathname===item.value? "text-green-600":" text-white"} `} key={index} href={item.value}>{item.key}</a>
-                  ))
-                }
+          <div className="absolute top-[60px] left-1 right-1  bg-[#2A2A2A] rounded-md p-1 flex flex-col gap-1 sm:hidden z-50">
+            {navbar_arr.map((item, index) => (
+              <a
+                className={` ${
+                  pathname === item.value ? "text-green-600" : " text-white"
+                } `}
+                key={index}
+                href={item.value}
+              >
+                {item.key}
+              </a>
+            ))}
           </div>
         )}
 
