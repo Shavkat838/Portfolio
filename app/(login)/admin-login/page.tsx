@@ -15,7 +15,7 @@ export default function Login() {
 
   useEffect(()=>{
     getAdmin()
-  },[])
+  },[getAdmin])
 const supabase=createClient()
 const router=useRouter()
 
@@ -25,7 +25,7 @@ const router=useRouter()
 
 async function getAdmin(){
   try {
-           let { data: malumotlar } = await supabase
+      const { data: malumotlar } = await supabase
              .from("malumotlar")
              .select("*");
              console.log(malumotlar)
