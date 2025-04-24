@@ -33,19 +33,25 @@ async function getUser(){
   return (
     <div className="bg-[#1B1B1B]">
       <div className="max-w-[287px]  border-b-1 border-[#FFFFFF40] mb-[14px] h-[40px] w-[100%] flex items-center gap-[14px] pl-[14px] ">
-        <Image src={"/chapImg.svg"} alt="Image" width={24} height={24} />
-        <Image src={"/ongImg.svg"} alt="Image" width={24} height={24} />
-        <Image src={"/refresh.svg"} alt="Image" width={24} height={24} />
+        <Image className="w-[24px] h-[24px] " src={"/chapImg.svg"} alt="Image" width={24} height={24} />
+        <Image className="w-[24px] h-[24px] " src={"/ongImg.svg"} alt="Image" width={24} height={24} />
+        <Image className="w-[24px] h-[24px] " src={"/refresh.svg"} alt="Image" width={24} height={24} />
       </div>
       <div className="max-[287px] w-[100%] h-[376px] border-b-1 pl-[14px] border-[#FFFFFF40]">
-        <Image
-          className="rounded-[10px]"
-          src={users[0]?.imageUrl}
-          alt="person"
-          width={259}
-          height={260}
-          style={{height:"260px",width:"259px",backgroundSize:"100% 100%"}}
-        />
+        {users[0]?.imageUrl && (
+          <Image
+            className="rounded-[10px]"
+            src={users[0]?.imageUrl}
+            alt="person"
+            width={259}
+            height={260}
+            style={{
+              height: "260px",
+              width: "259px",
+              backgroundSize: "100% 100%",
+            }}
+          />
+        )}
         <div>
           <p className="font-medium  text-[18px] leading-1 text-white mt-[14px]">
             {users[0]?.name}
@@ -64,7 +70,7 @@ async function getUser(){
       </div>
       <div className="max-w-[288px] h-[244px]   mt-[14px]  flex flex-col items-center gap-[14px]">
         <div className="w-[260px] h-[47px] flex gap-[10px]">
-          <Image src={"/gmail.svg"} alt="gmail" width={44} height={44} />
+          <Image className="w-[44px] h-[44px] " src={"/gmail.svg"} alt="gmail" width={44} height={44} />
           <div className="width-[171px] h-[47px]  flex flex-col gap-[15px] ">
             <h5 className="font-medium  text-white text-[16px] mt-[10px] leading-1">
               E-pochta
@@ -75,7 +81,7 @@ async function getUser(){
           </div>
         </div>
         <div className="w-[260px] h-[47px] flex gap-[10px]">
-          <Image src={"/git.svg"} alt="git" width={44} height={44} />
+          <Image className="w-[44px] h-[44px] " src={"/git.svg"} alt="git" width={44} height={44} />
           <div className="width-[171px] h-[47px]  flex flex-col gap-[15px] ">
             <h5 className="font-medium  text-white text-[16px] mt-[10px] leading-1">
               Github
@@ -88,7 +94,7 @@ async function getUser(){
           </div>
         </div>
         <div className="w-[260px] h-[47px] flex gap-[10px]">
-          <Image src={"/telegram.svg"} alt="telegram" width={44} height={44} />
+          <Image className="w-[44px] h-[44px]  " src={"/telegram.svg"} alt="telegram" width={44} height={44} />
           <div className="width-[171px] h-[47px]  flex flex-col gap-[15px] ">
             <h5 className="font-medium  text-white text-[16px] mt-[10px] leading-1">
               Telegram
@@ -101,7 +107,7 @@ async function getUser(){
           </div>
         </div>
         <div className="w-[260px] h-[47px] flex gap-[10px]">
-          <Image src={"/contact.svg"} alt="gmail" width={44} height={44} />
+          <Image className="w-[44px] h-[44px] " src={"/contact.svg"} alt="gmail" width={44} height={44} />
           <div className="width-[171px] h-[47px]  flex flex-col gap-[15px] ">
             <h5 className="font-medium  text-white text-[16px] mt-[10px] leading-1">
               Telefon raqam
