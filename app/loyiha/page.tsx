@@ -69,7 +69,7 @@ export default function LoyihaPage() {
             <Image src={"/filter.svg"} alt="photo" width={20} height={20} />
           </div>
           <div className="max-w-[484px]  w-full h-[44px] flex justify-end">
-            <div className="max-w-[148px] w-full rounded-[6px] border-1 border-[#FFFFFF40] h-[44px] bg-[#1B1B1B] flex items-center justify-center gap-[10px]">
+            <div className="max-w-[148px] w-full rounded-[6px] border-1 border-[#FFFFFF40] h-[44px] bg-[#1B1B1B] flex items-center justify-center gap-[5px]">
               <select
                 onChange={(e) => handleFilter(e.target.value as Role)}
                 className="text-[16px] bg-[#1B1B1B] max-w-[148px] w-[100%] border-none font-medium text-white"
